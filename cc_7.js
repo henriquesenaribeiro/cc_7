@@ -66,3 +66,20 @@ let transactions = [500, 1200, 3000, 800, 2200];
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected: [1200, 3000, 2200]
 
 // Created a function to filter values and applied it to an array to extract high-value transactions.
+
+// Task 7: Budget Tracker
+
+function createBudgetTracker() {
+    let balance = 0;
+    return function(expense) {
+        balance -= expense;
+        return `Current Balance: -$${-balance}`;
+    };
+}
+
+let budget = createBudgetTracker();
+console.log(budget(300)); // Expected: "Current Balance: -$300"
+console.log(budget(200)); // Expected: "Current Balance: -$500"
+
+// Created a budget tracker and used -= to show negatuve values 
+
