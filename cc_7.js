@@ -33,3 +33,14 @@ console.log(calculateLoyaltyDiscount(200, 2)); // Expected: "Discounted Price: $
 
 // Implemented an arrow function to determine a loyalty discount based on three different scenarios, followed by incorporating test data.
 
+// Task 4: Product Shipping Cost Calculation
+
+function calculateShippingCost(weight, location, expedited = false) {
+    let baseCost = location === "USA" ? 5 + (0.5 * weight) : 10 + (0.7 * weight);
+    if (expedited) baseCost += 10;
+    return `Shipping Cost: $${baseCost.toFixed(2)}`;
+}
+console.log(calculateShippingCost(10, "USA", true)); // Expected: "Shipping Cost: $20.00"
+console.log(calculateShippingCost(5, "Canada", false)); // Expected: "Shipping Cost: $13.50"
+
+// Created a function to calculate shipping costs for certain regions/countries, the exepction is if it is expitited to add $10
