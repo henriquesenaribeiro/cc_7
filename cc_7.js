@@ -55,3 +55,14 @@ console.log(calculateLoanInterest(1000, 0.05, 3)); // Expected: "Total Interest:
 console.log(calculateLoanInterest(5000, 0.07, 5)); // Expected: "Total Interest: $1750.00"
 
 // Developed a function that calculates loan interest using three parameters and validated it with the provided data.
+
+// Task 6: Filtering High-Value Transactions
+
+function filterHighValueTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}
+
+let transactions = [500, 1200, 3000, 800, 2200];
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected: [1200, 3000, 2200]
+
+// Created a function to filter values and applied it to an array to extract high-value transactions.
