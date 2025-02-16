@@ -83,3 +83,16 @@ console.log(budget(200)); // Expected: "Current Balance: -$500"
 
 // Created a budget tracker and used -= to show negatuve values 
 
+// Task 8: Business Growth Projection
+
+function calculateGrowth(years, revenue) {
+    if (years === 0) {
+        return `Projected Revenue: $${revenue.toFixed(2)}`;
+    }
+    return calculateGrowth(years - 1, revenue * 1.05);
+}
+console.log(calculateGrowth(8, 1000)); // Expected: "Projected Revenue: $1102.50"
+console.log(calculateGrowth(5, 5000)); // Expected: "Projected Revenue: $6381.41"
+
+
+// Developed a function to display projected revenue growth and tested it with the provided data.
