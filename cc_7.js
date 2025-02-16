@@ -20,3 +20,16 @@ console.log(calculateHourlyWage(75000, 35)); // Expected: "Hourly Wage: $41.21"
 
 // Created a function with 2 parameters and developed a formula to calculate hourly wage, followed by returning test data
 
+// Task 3: Customer Loyalty Discount
+
+function calculateLoyaltyDiscount(amount, years) {
+    let discountRate = years >= 5 ? 0.15 : years >= 3 ? 0.10 : 0.05;
+    let discountedPrice = amount * (1 - discountRate);
+    return `Discounted Price: $${discountedPrice.toFixed(2)}`;
+}
+
+console.log(calculateLoyaltyDiscount(100, 6)); // Expected: "Discounted Price: $85.00"
+console.log(calculateLoyaltyDiscount(200, 2)); // Expected: "Discounted Price: $190.00"
+
+// Implemented an arrow function to determine a loyalty discount based on three different scenarios, followed by incorporating test data.
+
